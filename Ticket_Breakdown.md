@@ -16,3 +16,13 @@ Based on the information given, break this ticket down into 2-5 individual ticke
 You will be graded on the level of detail in each ticket, the clarity of the execution plan within and between tickets, and the intelligibility of your language. You don't need to be a native English speaker, but please proof-read your work.
 
 ## Your Breakdown Here
+
+- Add new field to facility table to store agent ids which indicates the agents working on the facility. (no criteria, est: 1hr)<p>
+we can handle this problem by adding new column to facility table and update the database models for it.
+- Add `getShiftsByAgent` function which is called with agent id, it should return the shifts worked with the Agent. (no criteria, est: 1.5hr)<p>
+Write some query to get shifts by agent id instead of facility id.
+- Add `getAgentsByFacility` function which is called with facility id, it should return agent id list. (first ticket have to be resolved, est: 1hr)<p>
+Write query to retrieve agent id from facility id.
+- Update `generateReport` function to get report by summarizing the shift daba by agent ids (second and third ticket must be resolved, est: 1hr)<p>
+Just invoke `getAgentsByFacility` and `getShiftsByAgent` in order.
+After then summarize the returned results and return that value.
